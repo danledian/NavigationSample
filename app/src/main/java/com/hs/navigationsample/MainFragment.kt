@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_main.view.*
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
 
@@ -20,12 +20,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.bt_launch_activity_second.setOnClickListener {
-            view.findNavController().navigate(R.id.action_mainFragment_to_secondActivity)
+        bt_launch_activity_second.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_secondActivity)
         }
 
-        view.bt_launch_fragment_second.setOnClickListener {
-            view.findNavController().navigate(R.id.action_mainFragment_to_secondFragment2)
+        bt_launch_fragment_second.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_secondFragment)
         }
     }
 }

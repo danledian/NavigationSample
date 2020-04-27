@@ -7,11 +7,11 @@
 
     <activity android:id="@+id/secondActivity" android:name="com.hs.navigationsample.SecondActivity"
               android:label="activity_second" tools:layout="@layout/activity_second"/>
-    <fragment android:id="@+id/secondFragment2" android:name="com.hs.navigationsample.SecondFragment"
+    <fragment android:id="@+id/secondFragment" android:name="com.hs.navigationsample.SecondFragment"
               android:label="fragment_second" tools:layout="@layout/fragment_second"/>
     <fragment android:id="@+id/mainFragment" android:name="com.hs.navigationsample.MainFragment"
               android:label="fragment_main" tools:layout="@layout/fragment_main">
         <action android:id="@+id/action_mainFragment_to_secondActivity" app:destination="@id/secondActivity"/>
-        <action android:id="@+id/action_mainFragment_to_secondFragment2" app:destination="@id/secondFragment2"/>
+        <action android:id="@+id/action_mainFragment_to_secondFragment" app:destination="@id/secondFragment"/>
     </fragment>
 </navigation>
