@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav"
+            app:startDestination="@id/mainFragment">
+
+    <activity android:id="@+id/secondActivity" android:name="com.hs.navigationsample.SecondActivity"
+              android:label="activity_second" tools:layout="@layout/activity_second"/>
+    <fragment android:id="@+id/secondFragment2" android:name="com.hs.navigationsample.SecondFragment"
+              android:label="fragment_second" tools:layout="@layout/fragment_second"/>
+    <fragment android:id="@+id/mainFragment" android:name="com.hs.navigationsample.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_secondActivity" app:destination="@id/secondActivity"/>
+        <action android:id="@+id/action_mainFragment_to_secondFragment2" app:destination="@id/secondFragment2"/>
+    </fragment>
+</navigation>
